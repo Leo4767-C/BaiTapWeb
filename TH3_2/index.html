@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Đăng Ký Tài Khoản</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="registerForm">
+        <h2>Đăng Ký Tài Khoản</h2>
+
+        <div class="form-group">
+          <label for="name">Họ tên:</label>
+          <input type="text" id="name" />
+          <span class="error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu:</label>
+          <input type="password" id="password" />
+          <span class="error" id="passwordError"></span>
+        </div>
+        <button type="submit" class="submit-btn">Đăng ký</button>
+      </form>
+
+      <div id="successMessage" class="success-message" style="display: none">
+        <h3>🎉 Đăng ký thành công!</h3>
+        <p>Cảm ơn bạn đã đăng ký.</p>
+        <button id="toggleDetail">Xem chi tiết</button>
+
+        <div id="detailInfo" style="display: none; margin-top: 15px">
+          <p>👉 Chúng tôi đã nhận thông tin đăng ký của bạn.</p>
+          <p>📧 Vui lòng kiểm tra email để kích hoạt tài khoản.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
