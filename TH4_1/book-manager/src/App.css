@@ -1,0 +1,118 @@
+import './App.css';
+*
+
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container chính */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2b7a78;
+}
+
+/* Danh sách sách */
+.book-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.book-list th,
+.book-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.book-list th {
+  background-color: #3aafa9;
+  color: white;
+}
+
+.book-list tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.book-list tr:hover {
+  background-color: #d3f3f1;
+}
+
+/* Form thêm/sửa */
+.book-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.book-form input:focus {
+  outline: none;
+  border: 1px solid #3aafa9;
+}
+
+/* Các nút */
+.button {
+  padding: 5px;
+  background-color: #3aafa9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2b7a78;
+}
+
+
+/* Nút xóa */
+.button.delete {
+  background-color: #ff6b6b;
+}
+
+.button.delete:hover {
+  background-color: #d90429;
+}
+
+/* Responsive nhẹ */
+@media (max-width: 600px) {
+  .book-list th,
+  .book-list td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .book-form input {
+    font-size: 14px;
+  }
+}

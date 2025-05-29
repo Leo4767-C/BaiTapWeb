@@ -21,13 +21,11 @@ h2 {
   color: #333;
   margin-bottom: 20px;
 }
-
 .input-area {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
-
 .input-area input {
   flex: 1;
   padding: 10px;
@@ -45,9 +43,9 @@ h2 {
   cursor: pointer;
   font-size: 16px;
 }
-
+/* Thay đổi con trỏ chuột thành ngón tay trỏ */
 .input-area button:hover {
-  background-color: #019875;
+  background-color: #0984e3;
 }
 
 #taskList {
@@ -64,13 +62,12 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.3s;
 }
 
 li.completed {
   text-decoration: line-through;
   color: #aaa;
-  background: #eaeaea;
+  background: #dbc9c9;
   border-left-color: gray;
 }
 

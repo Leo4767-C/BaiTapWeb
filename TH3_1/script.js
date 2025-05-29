@@ -4,22 +4,23 @@ window.onload = function () {
   loadTasksFromLocalStorage();
   renderTasks();
 };
-
+L;
+// ấy input người dùng:
 function addTask() {
   const taskInput = document.getElementById("taskInput");
   const taskText = taskInput.value.trim();
-
+  // Kiểm tra nếu chưa nhập gì thì cảnh báo:
   if (taskText === "") {
     alert("Vui lòng nhập nội dung công việc!");
     return;
   }
-
+  // Tạo một đối tượng công việc mới:
   const newTask = {
     id: Date.now(),
     text: taskText,
     isDone: false,
   };
-
+  // Thêm vào mảng, lưu vào localStorage, cập nhật lại giao diện:
   tasks.push(newTask);
   saveTasksToLocalStorage();
   renderTasks();
@@ -28,6 +29,7 @@ function addTask() {
 
 function renderTasks() {
   const taskList = document.getElementById("taskList");
+  // Xóa nội dung cũ trước khi render lại:
   taskList.innerHTML = "";
 
   tasks.forEach((task) => {
